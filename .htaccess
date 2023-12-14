@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Rewrite 'welcome' to 'rabbitgod.html'
+RewriteRule ^welcome$ rabbitgod.html [NC,L]
+
+# Remove .html extension (except for 'welcome')
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteCond %{REQUEST_URI} !^/welcome$
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Optional: Redirect direct .html access to clean URL
+RewriteCond %{THE_REQUEST} \s/+(.*?/)?(?:index)?(.*?)\.html[\s?/] [NC]
+RewriteRule ^ /%1%2 [R=301,L,NE]

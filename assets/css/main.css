@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    text-align: center;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.circles h1{
+    text-align: center;
+    color: #fff;
+    font-size: 111px;
+    text-shadow: rgba(0, 0, 0, 0.555) 0.1em 0.1em 0.2em;
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.area{
+    background: linear-gradient(to left, rgb(49, 116, 240), #4e91c8); /* Standard syntax */
+    width: 100%;
+    height:100vh;    
+   
+}
+
+@keyframes gradientAnimation {
+    10% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.area {
+    background: linear-gradient(140deg, #bf63fc, #588dff, #ae00ff);
+    background-size: 300% 300%;
+    animation: gradientAnimation 60s ease infinite;
+    width: 100vw;  /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+  
+
+.circles{
+    position: absolute;
+    background-image: image-set(url(assets\images\ab.png) 1x, url(assets\images\ab.png) 2x);
+    list-style-image: url(assets\images\ab.png);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    list-style-image: url(assets\images\ab.png);
+    scale: 100%;
+    width: 100%;
+    height: 100%;
+    animation: animate 60s linear infinite;
+    bottom: -325px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+    animation-duration: 2s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 600px;
+    height: 600px;
+    animation-delay: 0s;
+    animation-duration: 4s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+    animation-duration: 8s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 3s;
+}
+
+.circles li:nth-child(8){
+    left: 70%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 0s;
+    animation-duration: 5s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 0s;
+    animation-duration: 5s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 7s;
+}
+
+
+
+@keyframes animate {
+
+    10%{
+        transform: translateY(-100px) rotate(260deg);
+        opacity: 100;
+        border-radius: 50%;
+    }
+
+    70%{
+        transform: translateY(-400px) rotate(60deg);
+        opacity: 100;
+        border-radius: 50%;
+        scale: 200%;
+        transform: scale(700%);
+        background-image: image-set(url(assets\images\ab.png) 1x, url(assets\images\ab.png) 2x);
+    }
+
+    100%{
+        transform: translateY(-900%) rotate(20deg);
+        opacity: 100;
+        border-radius: 50%;
+    }
+
+}
